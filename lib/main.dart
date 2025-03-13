@@ -28,17 +28,20 @@ class SelectPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          ElevatedButton(
-            onPressed: () => InstagramApp.main(),
-            child: const Text('instagram'),
-          ),
-          ElevatedButton(
-            onPressed: () => AppleMusic.main(),
-            child: const Text('Apple Music'),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 64),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () => InstagramApp.main(),
+              child: const Text('instagram'),
+            ),
+            ElevatedButton(
+              onPressed: () => AppleMusic.main(),
+              child: const Text('Apple Music'),
+            ),
+          ],
+        ),
       ),
     );
   }
