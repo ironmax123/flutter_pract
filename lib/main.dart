@@ -1,7 +1,10 @@
+// ignore_for_file: library_prefixes
+
 import 'package:flutter/material.dart';
 
 import 'apps/instagram/main.dart' as InstagramApp;
 import 'apps/apple_music/main.dart' as AppleMusic;
+import 'apps/pract/mian.dart' as Pract;
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +42,10 @@ class SelectPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () => AppleMusic.main(),
               child: const Text('Apple Music'),
+            ),
+            ElevatedButton(
+              onPressed: () => Pract.main(),
+              child: const Text('練習'),
             ),
           ],
         ),
