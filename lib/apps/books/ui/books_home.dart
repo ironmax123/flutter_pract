@@ -62,11 +62,22 @@ class BooksHomePage extends HookWidget {
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.black,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Gap(10),
+                          Gap(8),
                           Text(
                             book.authors,
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black54,
+                            ),
+                          ),
+                          Gap(12),
+                          Text(
+                            book.description,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 3,
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.grey,

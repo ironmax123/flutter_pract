@@ -16,10 +16,12 @@ Future<List<Books>> fetchBooks(String searchQuery) async {
   // items から Books インスタンスを生成して返す
   return items.map((item) {
     final volumeInfo = item['volumeInfo'] ?? {};
+    print(volumeInfo['description']);
     return Books(
       title: volumeInfo['title'] ?? '',
       authors: (volumeInfo['authors'] ?? []).join(', '),
       thumbnail: (volumeInfo['imageLinks']?['thumbnail'] ?? ''),
+      description: (volumeInfo['description'] ?? ''),
     );
   }).toList();
 }
